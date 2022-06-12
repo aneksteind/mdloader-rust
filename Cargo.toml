@@ -1,0 +1,24 @@
+[workspace]
+members = []
+
+[package]
+name = "mdloader"
+authors = ["C2Rust", "David Anekstein"]
+version = "0.0.1"
+publish = false
+edition = "2018"
+autobins = false
+
+[lib]
+name = "mdloader"
+path = "lib.rs"
+crate-type = ["staticlib", "rlib"]
+
+[[bin]]
+path = "mdloader_common.rs"
+name = "mdloader"
+
+[dependencies]
+c2rust-bitfields= "0.3"
+libc= "0.2"
+lazy-static-include = "3.1"
